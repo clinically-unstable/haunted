@@ -81,8 +81,9 @@ int main() {
    /                                                \\\n\
   /                                                  \\\n\
  /____________________________________________________\\\n";;
-            cout << "You enter the hallway";
-            cout << "You tripped on a few particles of dust, what a loser";
+            cout << "You enter the hallway\n";
+            cin.get();
+            cout << "You tripped on a few particles of dust, what a loser\n";
             cout << "Something appears in front of you, although you can't make out its shape. Do you: \n1. Throw hands with it.\n2. Attempt flirting with it.\n3. Stab with a knife.\n";
             cin >> hall;
             switch (hall) {
@@ -90,7 +91,8 @@ int main() {
                 cout << "You end up beating the living hell out of the dark figure. \n";
                 cout << "Turns out, it was just a homeless man. That was rude.\n\n";
                 cout << "You go further down the hallway, good job!\n\n";
-                cout << "You begin to get a little tired, do you want to:\n1. Sit in the halls and take a break\n2. Start doomscrolling\n3. Begin to cry.";
+                cout << "You begin to get a little tired, do you want to:\n1. Sit in the halls and take a break\n2. Start doomscrolling\n3. Begin to cry.\n";
+                cin >> hall2;
                 switch (hall2) {
                     case 1: 
                         cout << "You sit on the crusty floors of this manor. You probably contracted 3 unknown diseases from the floor.\n";
