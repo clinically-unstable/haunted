@@ -16,6 +16,8 @@ int main() {
     int hall2;
     int stair;
     int door;
+    int charisma;
+    string wait;
    cout << "                               !!!!!!\n\
                        .       [[[|]]]    .\n\
                        !!!!!!!!|--_--|!!!!!\n\
@@ -47,7 +49,7 @@ int main() {
    |^| ^  |================|^   | ^ ^^ ^ |  ^ ||\n\
   \\|//\\\\/^|/==============\\|/^\\\\\\^/^.\\^///\\\\//|///\n\
  \\\\///\\\\\\//===============\\\\//\\\\///\\\\\\\\////\\\\\\/////\n";;
-    cout << "\nHey pal, you're really dumb and stumbled into a haunted house.";
+    cout << "\nHey pal, you're really dumb and stumbled into a haunted house. It is currently 11:30 P.M. in Eastern Standard Time. \n";
     cout << "You walk into the house, and you find three paths\n1. An infinite hallway.\n2. A staircase with Adam's face all over it.\n3. A funny-looking door.\n";;
     cin >> option;
 
@@ -91,7 +93,20 @@ int main() {
                 cout << "You begin to get a little tired, do you want to:\n1. Sit in the halls and take a break\n2. Start doomscrolling\n3. Begin to cry.";
                 switch (hall2) {
                     case 1: 
-                        cout << "You sit on the crusty floors of this manor. You probably contracted 3 unknown diseases from the floor.";
+                        cout << "You sit on the crusty floors of this manor. You probably contracted 3 unknown diseases from the floor.\n";
+                        cout << "You merge with the floors and become an extra foot in this hallway. Stop fumbling.\n";
+                        cout << "I think you died btw.\n";
+                        break;
+                    case 2:
+                        cout << "No.\n";
+                        cout << "You turn into Mason and collapse from Brainrottalitis.\n"
+                        cout << "You're dead, don't do that again.";
+                        break;
+                    case 3:
+                        cout << "You begin to start bawling your eyes out.\n";
+                        cout << "The house pities your sorry state and leaves you alone for now.\n";
+                        cout << "Good boy!\n\n";
+                        cout << "You check the time on your phone, it hasn't changed since you've gotten here.";
                 }
                 break;
                 case 2:
