@@ -131,7 +131,7 @@ int main() {
                         cout << "Oh well! Time to wait I guess.\n";
                         cin.ignore();
                         cin.get();
-                        cout << "Day 1:";
+                        cout << "Day 1: I greatly dislike Adam.";
                 }
                 break;
                 case 2:
