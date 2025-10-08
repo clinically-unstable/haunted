@@ -50,6 +50,8 @@ int main() {
   \\|//\\\\/^|/==============\\|/^\\\\\\^/^.\\^///\\\\//|///\n\
  \\\\///\\\\\\//===============\\\\//\\\\///\\\\\\\\////\\\\\\/////\n";;
     cout << "\nHey pal, you're really dumb and stumbled into a haunted house. It is currently 11:30 P.M. in Eastern Standard Time. \n";
+    cin.ignore();
+    cin.get();
     cout << "You walk into the house, and you find three paths\n1. An infinite hallway.\n2. A staircase with Adam's face all over it.\n3. A funny-looking door.\n";;
     cin >> option;
 
@@ -82,33 +84,57 @@ int main() {
   /                                                  \\\n\
  /____________________________________________________\\\n";;
             cout << "You enter the hallway\n";
+            cin.ignore();
             cin.get();
             cout << "You tripped on a few particles of dust, what a loser\n";
+            cin.ignore();
+            cin.get();
             cout << "Something appears in front of you, although you can't make out its shape. Do you: \n1. Throw hands with it.\n2. Attempt flirting with it.\n3. Stab with a knife.\n";
             cin >> hall;
             switch (hall) {
                 case 1:
                 cout << "You end up beating the living hell out of the dark figure. \n";
                 cout << "Turns out, it was just a homeless man. That was rude.\n\n";
+                cin.ignore();
+                cin.get();
                 cout << "You go further down the hallway, good job!\n\n";
+                cin.ignore();
+                cin.get();
                 cout << "You begin to get a little tired, do you want to:\n1. Sit in the halls and take a break\n2. Start doomscrolling\n3. Begin to cry.\n";
                 cin >> hall2;
                 switch (hall2) {
                     case 1: 
                         cout << "You sit on the crusty floors of this manor. You probably contracted 3 unknown diseases from the floor.\n";
+                        cin.ignore();
+                        cin.get();
                         cout << "You merge with the floors and become an extra foot in this hallway. Stop fumbling.\n";
                         cout << "I think you died btw.\n";
                         break;
                     case 2:
                         cout << "No.\n";
+                        cin.ignore();
+                        cin.get();
                         cout << "You turn into Mason and collapse from Brainrottalitis.\n";
                         cout << "You're dead, don't do that again.";
                         break;
                     case 3:
                         cout << "You begin to start bawling your eyes out.\n";
+                        cin.ignore();
+                        cin.get();
                         cout << "The house pities your sorry state and leaves you alone for now.\n";
-                        cout << "Good boy!\n\n";
-                        cout << "You check the time on your phone, it hasn't changed since you've gotten here.";
+                        cout << "You proceed further down the hallway\n\n";
+                        cin.ignore();
+                        cin.get();
+                        cout << "You check the time on your phone, it hasn't changed since you've gotten here.\n\n";
+                        cin.ignore();
+                        cin.get();
+                        cout << "You don't feel hungry, you don't feel thirsty. You know it's been hours, but it still says 11:30 PM on your phone.\n";
+                        cin.ignore();
+                        cin.get();
+                        cout << "Oh well! Time to wait I guess.\n";
+                        cin.ignore();
+                        cin.get();
+                        cout << "Day 1:";
                 }
                 break;
                 case 2:
@@ -143,6 +169,8 @@ int main() {
                 break;
                 case 3:
                 cout << "You dropped the knife on your foot.\n";
+                cin.ignore();
+                cin.get();
                 cout << "The figure proceeds to rob you and whisper in your ear. You wish to bleed out faster and begin to cry.\n";
                 cout << "You died, restart pal.\n";
                 cout << "⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠤⠤⠖⠒⠒⠒⠦⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
