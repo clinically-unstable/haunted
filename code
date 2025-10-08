@@ -101,7 +101,7 @@ int main() {
                         break;
                     case 2:
                         cout << "No.\n";
-                        cout << "You turn into Mason and collapse from Brainrottalitis.\n"
+                        cout << "You turn into Mason and collapse from Brainrottalitis.\n";
                         cout << "You're dead, don't do that again.";
                         break;
                     case 3:
