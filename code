@@ -13,6 +13,7 @@ int main() {
 //ai-generated ascii art cause I'm really incompetent
     int option;
     int hall;
+    int hall2;
     int stair;
     int door;
    cout << "                               !!!!!!\n\
@@ -87,7 +88,11 @@ int main() {
                 cout << "You end up beating the living hell out of the dark figure. \n";
                 cout << "Turns out, it was just a homeless man. That was rude.\n\n";
                 cout << "You go further down the hallway, good job!\n\n";
-                cout << "You begin to get a little tired, do you want to:\n1. Sit in the halls and take a break\n2. Start doomscrolling\n3. ";
+                cout << "You begin to get a little tired, do you want to:\n1. Sit in the halls and take a break\n2. Start doomscrolling\n3. Begin to cry.";
+                switch (hall2) {
+                    case 1: 
+                        cout << "You sit on the crusty floors of this manor. You probably contracted 3 unknown diseases from the floor.";
+                }
                 break;
                 case 2:
                 cout << "It appears disgusted at your acts of lust.\nUnfortunately, a grand piano breaks the wooden ceiling above you and falls on your head and you die.\n";
