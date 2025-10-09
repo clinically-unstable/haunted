@@ -1,16 +1,20 @@
 /*Matthew and William
 Mrs. Alblas
 10/6/25
-Haunted House*/
+Haunted House
+Extra: Pure RNG*/
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
 int main() {
     srand(time(0));
 //ai-generated ascii art cause I'm really incompetent
+    srand(time(0));
     int option;
     int hall;
     int hall2;
@@ -18,6 +22,9 @@ int main() {
     int stair2;
     int stair3;
     int door;
+    int door2;
+    int door3;
+    int door4;
     int charisma;
     string wait;
    cout << "                               !!!!!!\n\
@@ -52,12 +59,28 @@ int main() {
   \\|//\\\\/^|/==============\\|/^\\\\\\^/^.\\^///\\\\//|///\n\
  \\\\///\\\\\\//===============\\\\//\\\\///\\\\\\\\////\\\\\\/////\n";;
     cout << "\nHey pal, you're really dumb and stumbled into a haunted house. It is currently 11:30 P.M. in Eastern Standard Time. \n";
+    cout << "Also, you're rolling for charisma now.\n";
+    charisma = rand() % 20 + 1;
+    cout << "You rolled a...\n";
     cin.get();
-    cout << "You walk into the house, and you find three paths\n1. An infinite hallway.\n2. A staircase with Adam's face all over it.\n3. A funny-looking door.\n";;
+    cout << charisma;
+    if (charisma == 20) {
+        cout << "\nYou walk away from the house. Nice one.";
+        return 0;
+        //ending 1
+    } else if (charisma == 1) {
+        cout << "\nThe house picks you up and tosses you into the backrooms.\n";
+        cin.get();
+        cout << "They don't want you either and send you to jail. You're put on trial and immediately put on death row.";
+        return 0;
+}
+    cin.get();
+    cout << "Anyways, you walk into the house, and you find three paths\n1. An infinite hallway.\n2. A staircase with Adam's face all over it.\n3. A funny-looking door.\n";;
     cin >> option;
     if (option == 4) {
         cout << "The house eats you. Don't do that again.";
     }
+    // The infinite hallway
     switch (option) {
         case 1:
        cout << "                _______________________\n\
@@ -105,13 +128,15 @@ int main() {
                 cin >> hall2;
                 switch (hall2) {
                     case 1: 
+                    // merging with the house
                         cout << "You sit on the crusty floors of this manor. You probably contracted 3 unknown diseases from the floor.\n";
                         cin.ignore();
                         cin.get();
-                        cout << "You merge with the floors and become an extra foot in this hallway. Stop fumbling.\n";
+                        cout << "You merge with the floors and become an extra meter in this hallway. Stop fumbling.\n";
                         cout << "I think you died btw.\n";
                         break;
                     case 2:
+                    // brainrot disease
                         cout << "No.\n";
                         cin.ignore();
                         cin.get();
@@ -119,6 +144,7 @@ int main() {
                         cout << "You're dead, don't do that again.";
                         break;
                     case 3:
+                    // "Good" Ending two (Permanently trapped)
                         cout << "You begin to start bawling your eyes out.\n";
                         cin.ignore();
                         cin.get();
@@ -139,12 +165,15 @@ int main() {
                         cin.get();
                         cout << "Day 120: I greatly dislike this no shower challenge, I'm starting to look homeless. My beard's grown out and I absolutely reek.\n";
                         cin.get();
-                        cout << "Day 1,???: I see someone! I've given up count after 500 but I know it's been years since the last time I saw anybody!";
+                        cout << "Day 289: Pushed someone down the stairs haha.";
+                        cin.get();
+                        cout << "Day 1,???: I've given up count after like three years but I think I see someone up there.";
                         cin.get();
                         cout << "Beat the hell out of this homeless guy, oops.\n";
                 }
                 break;
                 case 2:
+                // losing
                 cout << "It appears disgusted at your behavior.\nUnfortunately, a grand piano breaks the wooden ceiling above you and falls on your head and you die.\n";
                 cout << "You lost, go restart.\n";
               cout << "⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠤⠤⠖⠒⠒⠒⠦⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
@@ -175,10 +204,11 @@ int main() {
                 "⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n";
                 break;
                 case 3:
+                        // losing
                 cout << "You dropped the knife on your foot.\n";
                 cin.ignore();
                 cin.get();
-                cout << "The figure proceeds to rob you and whisper in your ear. You wish to bleed out faster and begin to cry.\n";
+                cout << "The figure proceeds to rob you and whisper in your ear. You got a little booboo and begin to cry.\n";
                 cout << "You lost, restart pal.\n";
                 cout << "⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠤⠤⠖⠒⠒⠒⠦⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
                 "⠀⠀⠀⠀⠀⢀⡀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠲⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
@@ -261,27 +291,120 @@ int main() {
                     cin >> stair2;
                     switch (stair2) {
                         case 1:
+                                // losing
                             cout << "You try to grab the metal pipe. Unfortunately your hand slips and you also break the pipe.\nYou're throwing. Go restart.";
-                            break;
+                            return 0;
                         case 2: 
-                            cout << "Gravity doesn't exist if you don't believe in gravity.";
+                            cout << "Gravity doesn't exist if you don't believe in gravity.\n";
+                            cin.get();
+                            cout << "How did you make it back on the stairs? No one knows.\n";
+                            cout << "Hey is that Billy?\n";
+                            cin.get();
+                               cout << "                                          _,,_..\n"
+            "                                       _,,--''  '':'::!...\n"
+            "                                     _,-' ...::::::' ' ' '::::.\n"
+            "                                  _.' .':'''..'... . '::' ':::::.\n"
+            "                      .,...____,,.-'  ..''  .:.'' ...':''.:'''':::::\n"
+            "                   ,.:::'''''.        ' ..'' ...'' ':..''.''.   '::::\n"
+            "                  .:::''''  ''   ':  .''....:.....':'':''.''.  ''::::.\n"
+            "                  '''          ... .  ''''.''''''...:'.'. '..'. . ::::\n"
+            "                  :  O          .. '.    ..'...    ''. '.'.  : '::.:::\n"
+            "                  :'           . '.. ''.. :..  ''.   .'..'.: ' ..;::::\n"
+            "                  :\" __,..---- .:i  '    '.'.''...:'. ''.:.:'  :::: :\n"
+            "                .:'.-'            `.... .. '.''.  '''':. : ::  :';::'\n"
+            "              .:'.:'                '::::::..:':::..:. '. ': ::':;.'\n"
+            "             ::.''                    '':::::::''''.:'::.. ...::::;\n"
+            "           .::'                           '''''::::'''''::.::'::::\n"
+            "         .::'                                            :::'...:\n"
+            "        ::'                                             ;::  .:;\n"
+            "       :'                                              ,::' ,:.: \n"
+            "     .:'                                          '':::::: .:::\n"
+            "   .:'                                         ..:''''.'  .:::\n"
+            "  :'                                                 ''':::::'\n"
+            " :'                                                ..''' .'\n"
+            "'                                                     .''   \n"
+            "                                                     '\n";
+               cout << "Do you wanna pet Billy?\n1. Yes\n2. Kill him\n";
+               cin >> stair3;
+               switch (stair3) {
+                    case 1:
+                            // losing
+                        cout << "He eats your hand.\n";
+                        cin.ignore();
+                        cin.get();
+                        cout << "Billy hates you. Do not touch Billy.";
+                        return 0;
+                    case 2:
+                        cout << "You punt Billy across the room and his overwhelming power shatters the fabric of reality, letting you exit the house.\n";
+                        cin.ignore();
+                        cin.get(); // ending two
+                        cout << "The multiverse contains not PG content so this statement has been censored by the government.\n";
+                        cout << "You got out, I guess. Just figure out which universe you're in.";
+                        return 0;
+                    default: // death and despair
+                        cout << "Billy's radiant essence reduces you to ash.";
+                        return 0;
+               }
                     }
+                    case 3: 
+                        cout << "Your dislocated limbs were able to grab onto the edge of the stairs.\n";
+                        cin.ignore();
+                        cin.get();
+                         cout << "Wow, you got back up!\n";
+                         cout << "Oh, some homeless guy is camping the stairs.\n";
+                        if (charisma >= 10) {
+                            cin.get(); // ending three
+                            cout << "You were able to convince him to not kill you, and you stomp his face into the stairs.\n";
+                            cout << "Good job? I guess?";
+                        } else {
+                                    // losing
+                            cout << "Oh, he pushed you off the stairs.";
+                            cout << "I dont think you survived that.";
+                            return 0;
+                        }
+                case 2: // death and despair
+                    cout << "The cellar is filled with the tears of computer science students.\n";
+                    cin.ignore();
+                    cin.get();
+                    cout << "You feel an urge to add to the collection.\n";
+                    cout << "Due to excessive dehydration, you collapse on the floor from exhaustion. Good job Adam.";
+                    return 0;
+            return 0;
             }
         case 3: 
-          cout << "            __________\n"
-                 "           |  __  __  |\n"
-                 "           | |  ||  | |\n"
-                 "           | |  ||  | |\n"
-                 "           | |__||__| |\n"
-                 "           |  __  __()|\n"
-                 "           | |  ||  | |\n"
-                 "           | |  ||  | |\n"
-                 "           | |  ||  | |\n"
-                 "           | |  ||  | |\n"
-                 "           | |__||__| |\n"
-                 "           |__________|\n";
+                // ending 4
+            cout << "Wake up, there is no door. You're schizophrenic. There is no haunted house.";
             break;
-    }
-
+        default:
+                // losing
+            cout << "You're not supposed to do that, go in.\n";
+                cout << "⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠤⠤⠖⠒⠒⠒⠦⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠀⠀⠀⠀⢀⡀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⠲⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠀⠀⠀⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠀⢀⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⡎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢳⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⣼⠀⠀⠀⠀⠀⢀⣀⣀⡀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣀⠀⠀⠀⠀⠸⡆⠀⠀⠀⠀⠀⠀⠀\n"
+                "⣿⠀⠀⠀⣠⠖⠉⣾⢺⣯⣽⡦⣄⠀⠀⠀⠀⠀⣴⠞⠁⣸⢿⣧⣽⡇⠑⣶⠄⠀⠀⠧⠀⠀⠀⠀⠀⠀⠀\n"
+                "⢸⡀⠀⠀⢧⡀⠀⢿⣜⣟⣿⣃⣽⠗⠀⠀⠀⠀⠙⠢⣄⣘⣷⣿⣿⣡⠟⠁⠀⠀⠀⢐⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠠⣇⠀⠀⠀⠈⠐⠒⠛⠛⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⢰⠇⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠀⠘⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠖⠛⠀⠀⠀⠀⠀⠀⣠⠃⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠀⠀⠈⠲⣀⠀⠀⠀⠀⠀⠀⠒⠻⠄⠠⠤⠐⠒⠉⠀⠀⠀⠀⠀⠀⢀⡠⠒⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
+                "⠀⠀⠀⠀⠀⠈⠓⠄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⣠⠤⠒⠋⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀\n"
+                "⠀⠀⠀⠀⣀⠷⠀⠀⠀⠉⠁⠒⠒⠢⠤⠤⠤⠔⠒⠒⠒⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢆⠀⠀⠀\n"
+                "⠀⠀⠀⡞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣦⠀⠀\n"
+                "⠀⠀⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡀⠀\n"
+                "⠀⠀⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀\n"
+                "⠀⢸⣁⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀\n"
+                "⠀⢨⡇⠀⠀⠀⠀⣤⠶⠊⠉⠉⠑⠢⡀⠀⣀⣀⣀⣤⡤⡤⠤⢤⣠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣈⣇\n"
+                "⠀⢸⣇⡀⠀⠀⡼⠹⡀⢀⡤⠴⠛⠚⡏⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⣧\n"
+                "⠀⠀⣿⠁⠀⠈⢷⠜⠻⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⢹\n"
+                "⠀⠀⢸⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡤⠒⠊⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠛\n"
+                "⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠔⠊⠉⠀⠀⠈⠉⠉⠉⠑⠒⠢⠤⣀⣀⠀⠀⠀⢀⡰⠃⠀\n"
+                "⠀⠀⠀⠀⠱⢄⠀⠀⠀⠀⣀⣠⠴⠒⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠈⠁⠀⠀⠀\n"
+                "⠀⠀⠀⠀⠀⠀⠉⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n";
+            break;
+}
     return 0;
 }
