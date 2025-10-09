@@ -120,18 +120,26 @@ int main() {
                         cin.get();
                         cout << "The house pities your sorry state and leaves you alone for now.\n";
                         cout << "You proceed further down the hallway\n\n";
-                        cin.ignore();
                         cin.get();
                         cout << "You check the time on your phone, it hasn't changed since you've gotten here.\n\n";
-                        cin.ignore();
                         cin.get();
                         cout << "You don't feel hungry, you don't feel thirsty. You know it's been hours, but it still says 11:30 PM on your phone.\n";
-                        cin.ignore();
                         cin.get();
                         cout << "Oh well! Time to wait I guess.\n";
-                        cin.ignore();
                         cin.get();
-                        cout << "Day 1: I greatly dislike Adam.";
+                        cout << "Day 1: I greatly dislike Gabriel for no particular reason.\n";
+                        cin.get();
+                        cout << "Day 3: Time doesn't pass in here, how do I even get out, gotta be Gabriel's fault.\n";
+                        cin.get();
+                        cout << "Day 6: I will not be listing the next day.\n";
+                        cin.get();
+                        cout << "Day 120: I greatly dislike this no shower challenge, I'm starting to look homeless. My beard's grown out and I absolutely reek.";
+                        cin.get();
+                        cout << "Day 1,???: I see someone! I've given up count after 500 but I know it's been years since the last time I saw anybody!";
+                        cin.get();
+                        cout << "Beat the hell out of this homeless guy, oops.\n";
+                        cin.get();
+                        cout << "You, technically survived cause you can't exactly die if spacetime is frozen, you're not just a puddle of broken bones on the floor. Good job!";
                 }
                 break;
                 case 2:
